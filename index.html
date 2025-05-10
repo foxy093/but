@@ -115,6 +115,11 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+    /* Hover para o botão estilizado */
+    form button:hover {
+      background-color: #e85c50;
+      transform: translateY(-5px);
+    }
   </style>
 </head>
 <body>
@@ -136,15 +141,26 @@
           <h3>300GB of photos and videos (5-14y)</h3>
           <p>Quality content.</p>
 
-          <!-- Novo botão PayPal centralizado -->
+          <!-- Novo botão PayPal estilizado -->
           <div style="display: flex; justify-content: center;">
-            <form action="https://www.paypal.com/donate" method="post" target="_top">
+            <form action="https://www.paypal.com/donate" method="post" target="_top" style="margin-top: 1.5rem;">
               <input type="hidden" name="business" value="EXJY54QGZJMR2" />
               <input type="hidden" name="amount" value="4" />
               <input type="hidden" name="no_recurring" value="1" />
               <input type="hidden" name="currency_code" value="USD" />
-              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-              <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+              <button type="submit" style="
+                background-color: var(--primary-color);
+                color: white;
+                font-size: 1.5rem;
+                padding: 1rem 2rem;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+                transition: background-color 0.3s, transform 0.3s;
+              ">
+                Donate $4
+              </button>
             </form>
           </div>
 
